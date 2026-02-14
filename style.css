@@ -13,17 +13,16 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 80px;
-  border: 0.5rem solid gray;
-  margin-top: 3rem;
-  margin: 2rem 1rem ;
-  padding: 1rem;
+    max-width: 900px;
+    margin: 8rem 2rem;
+    padding: 4rem 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;    transition: 0.3s ease;
 
 }
-
 
 header {
   width: 100%;
@@ -76,8 +75,6 @@ header {
   color: #3b82f6;
 }
 
-/* ========== HAMBURGER ========== */
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -109,7 +106,7 @@ header {
 #button button {
   margin-top: 30px;
   padding: 14px 28px;
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  background: linear-gradient(135deg, #0a0a0a, #0c0c0e);
   border: none;
   color: white;
   border-radius: 12px;
@@ -125,10 +122,17 @@ header {
 }
 
 #button-view-document h4 {
-  margin-top: 15px;
-  color: #475569;
-  font-weight: 500;
-  cursor: pointer;
+    margin-top: 1rem;
+    padding: 14px 28px;
+    border-radius: 16px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+
+    display: inline-block;   /* مهم */
+    width: auto;  
 }
 
 #main1 {
@@ -245,11 +249,50 @@ header {
 }
 
 .similar-section {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
   gap: 15px;
   padding: 20px 0;
   border-bottom: 1px solid #f1f5f9;
+}
+
+
+.similar-section svg{
+    background-color: rgba(15, 15, 228,0.5);
+    border-radius: 50%;
+}
+
+#analytics,
+#server,
+#system{
+    display: grid;
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+
+#analytics:hover{
+    transform: translateY(-4px);
+    background-color: #ebeeee;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-radius: 12px;
+}
+
+#server:hover{
+    transform: translateY(-4px);
+    background-color: #ebeeee;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-radius: 12px;
+}
+
+#system:hover{
+    transform: translateY(-4px);
+    background-color: #ebeeee;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-radius: 12px;
 }
 
 .similar-section:last-child {
@@ -265,7 +308,6 @@ header {
   color: #64748b;
 }
 
-/* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {.menu {
     display: none;
